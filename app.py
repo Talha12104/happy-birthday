@@ -2,16 +2,16 @@ import streamlit as st
 from PIL import Image
 
 # Load the profile picture
-pfp = Image.open("pfp.jpg")
+pfp = Image.open("pfp.jpg")  # Update the path to Ayesha's image
 
-# Inject professional custom CSS
+# Inject custom CSS
 st.markdown("""
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
     html, body, [class*="css"] {
         font-family: 'Poppins', sans-serif;
-        background: linear-gradient(to bottom right, #fff0f3, #ffe4e9);
+        background: linear-gradient(to bottom right, #fdf2f8, #fff0f5);
         color: #333;
     }
 
@@ -20,13 +20,13 @@ st.markdown("""
     }
 
     h1 {
-        color: #e63946;
+        color: #c9184a;
         text-align: center;
-        font-size: 3rem;
-        margin-bottom: 0.2em;
+        font-size: 2.8rem;
+        margin-bottom: 0.5em;
     }
 
-    .birthday-card {
+    .empower-card {
         background: #fff;
         padding: 2.5rem 2rem;
         margin-top: 2rem;
@@ -44,13 +44,25 @@ st.markdown("""
         border-radius: 50%;
         object-fit: cover;
         margin-bottom: 1rem;
-        border: 4px solid #e63946;
+        border: 4px solid #c9184a;
         box-shadow: 0 4px 20px rgba(0,0,0,0.2);
     }
 
-    .birthday-card p {
+    .empower-card p {
         font-size: 1.2rem;
         line-height: 1.6;
+    }
+
+    .hadith {
+        background: #f8f9fa;
+        border-left: 6px solid #c9184a;
+        margin: 2rem auto;
+        padding: 1rem 1.5rem;
+        font-style: italic;
+        max-width: 600px;
+        color: #555;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        border-radius: 12px;
     }
 
     .footer {
@@ -63,22 +75,32 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Title
-st.markdown("<h1>🎂 Happy Birthday Kiran! 🎉</h1>", unsafe_allow_html=True)
+st.markdown("<h1>🌹 To My Beloved Friend Ayesha 🌸</h1>", unsafe_allow_html=True)
 
 # Profile Picture
 st.markdown('<div style="text-align:center;">', unsafe_allow_html=True)
 st.image(pfp, caption="", use_container_width=True)
 st.markdown('</div>', unsafe_allow_html=True)
 
-# Birthday Message
+# Empowerment Message
 st.markdown("""
-    <div class="birthday-card">
-        <p><strong>Dear Kiran,</strong></p>
-        <p>Wishing you a day as beautiful and unforgettable as you are. May this year bring you endless happiness, success, and all the love your heart can hold.</p>
-        <p>Here’s to glowing moments, sweet memories, and dreams fulfilled. You deserve the absolute best. 🎈</p>
-        <p><strong>Happy Birthday!</strong> 💖</p>
+    <div class="empower-card">
+        <p><strong>Dear Ayesha,</strong></p>
+        <p>You are a soul of immense strength, a heart of unmatched kindness, and a light that no darkness can dim.</p>
+        <p>Even in the shadows of hardship, you’ve held on with grace — and that is a beauty no one can ever take from you.</p>
+        <p>I pray that Allah fills your days with peace, heals every wound, and surrounds you with people who truly value your heart.</p>
+        <p><strong>I love you, my beloved friend.</strong> 💖</p>
+    </div>
+""", unsafe_allow_html=True)
+
+# Hadith Section
+st.markdown("""
+    <div class="hadith">
+        The Prophet ﷺ said:<br>
+        <em>“Verily, with hardship comes ease.”</em><br>
+        — *Qur’an 94:6*
     </div>
 """, unsafe_allow_html=True)
 
 # Footer
-st.markdown('<div class="footer">Ordinary gift by 💐 Taru Saad</div>', unsafe_allow_html=True)
+st.markdown('<div class="footer">With deep care and love 💕 — Talha</div>', unsafe_allow_html=True)
